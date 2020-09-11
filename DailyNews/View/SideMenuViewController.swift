@@ -10,12 +10,11 @@ import UIKit
 import SideMenu
 import GoogleSignIn
 
-class SideMenuViewController: UIViewController {
+class SideMenuViewController:UIViewController {
 
-    @IBOutlet weak var userProfile: UIImageView!
-    @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var logoutButton: UIButton!
-    
+    @IBOutlet weak var userProfile:UIImageView!
+    @IBOutlet weak var userName:UILabel!
+    @IBOutlet weak var logoutButton:UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +24,6 @@ class SideMenuViewController: UIViewController {
     
     func setUI(){
         userProfile.layer.cornerRadius = userProfile.bounds.height / 2
-        
         userName.text = "Name : \(UserDefaults.standard.string(forKey: "userName")!)"
         let defaultImageURL = URL(string : "https://firebasestorage.googleapis.com/v0/b/g-library-91171.appspot.com/o/noProfile.png?alt=media&token=5fba10d7-3d98-4878-b90a-1c50774e0e2e")
         //for userProfile

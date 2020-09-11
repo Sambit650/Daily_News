@@ -14,5 +14,6 @@ target 'DailyNews' do
    pod 'Kingfisher', '~> 5.0'
    pod 'MBProgressHUD', '~> 1.0.0'
    pod 'RSSelectionMenu', '~> 7.1.0'
+   pod 'lottie-ios'
 
 end

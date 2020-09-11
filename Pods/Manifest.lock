@@ -56,6 +56,7 @@ PODS:
   - Kingfisher (5.15.0):
     - Kingfisher/Core (= 5.15.0)
   - Kingfisher/Core (5.15.0)
+  - lottie-ios (3.1.8)
   - MBProgressHUD (1.0.0)
   - nanopb (1.30906.0):
     - nanopb/decode (= 1.30906.0)
@@ -72,6 +73,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - GoogleSignIn
   - Kingfisher (~> 5.0)
+  - lottie-ios
   - MBProgressHUD (~> 1.0.0)
   - RSSelectionMenu (~> 7.1.0)
   - SideMenu
@@ -91,6 +93,7 @@ SPEC REPOS:
     - GTMAppAuth
     - GTMSessionFetcher
     - Kingfisher
+    - lottie-ios
     - MBProgressHUD
     - nanopb
     - PromisesObjC
@@ -111,6 +114,7 @@ SPEC CHECKSUMS:
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   Kingfisher: 1acb67597a520c2d0310677e66d6e0af455ef757
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
@@ -118,6 +122,6 @@ SPEC CHECKSUMS:
   SideMenu: 8ef57a3cfc024a2d3fc1c036c7fe98537baec9e0
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 29acab7addfe87389b3004d9044e8a70d7e14758
+PODFILE CHECKSUM: 63d3bb6d68cb9749c7a32f7ca6b79e5f93253d69
 
 COCOAPODS: 1.9.1
