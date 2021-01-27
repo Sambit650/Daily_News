@@ -17,7 +17,7 @@ class NewsAPIService {
         // Build URL
         let param = params
     
-        if param != "Headline"{
+        if param != "Headline" {
             let baseUrl = "https://newsapi.org/v2/everything?q="
             let childURL = "&apiKey=2ad38d35a8d94439a455b6b9cb569974"
             let url = baseUrl + param + childURL
@@ -39,7 +39,7 @@ class NewsAPIService {
                            failureCallback?(errorMessage)
                        }
                    )
-        }else{
+        } else {
             let url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=2ad38d35a8d94439a455b6b9cb569974"
             APICallManager.self.createRequest(
                        url, method: .get, headers: nil, parameters: nil,
