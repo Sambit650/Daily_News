@@ -4,6 +4,9 @@
 ## Celebrity & Entertainment, Sports, Fashion, Science & Tech, Health, Money & Business, Travel and many more. Daily News app fits easily into your busy lifestyle.
 
 ## Key Features:
+
+* It Supports Dark mode.
+
 * Trusted news sources
 Daily News’s news content discovery engine aggregates rich content from more than trusted sources Browse content at any time, any location!
 
