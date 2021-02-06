@@ -15,5 +15,6 @@ target 'DailyNews' do
    pod 'MBProgressHUD', '~> 1.0.0'
    pod 'RSSelectionMenu', '~> 7.1.0'
    pod 'lottie-ios'
+   pod 'Firebase/Performance'
 
 end
