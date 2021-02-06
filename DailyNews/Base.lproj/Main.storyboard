@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vm7-6h-CrR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vm7-6h-CrR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,12 +26,12 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="BqQ-gu-WZn"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Wev-He-iLM" firstAttribute="centerX" secondItem="Nke-Br-4UK" secondAttribute="centerX" id="Yue-Pe-EK6"/>
                             <constraint firstItem="Wev-He-iLM" firstAttribute="centerY" secondItem="Nke-Br-4UK" secondAttribute="centerY" id="psM-W2-E3w"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="BqQ-gu-WZn"/>
                     </view>
                     <connections>
                         <outlet property="animationBGView" destination="Wev-He-iLM" id="Eld-F1-P2m"/>
@@ -80,7 +82,7 @@
                                         <rect key="frame" x="-10" y="-10" width="195" height="194"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstItem="hBs-xF-zFq" firstAttribute="top" secondItem="egC-qt-g2J" secondAttribute="top" constant="-10" id="8Xi-nL-rym"/>
                                     <constraint firstAttribute="trailing" secondItem="hBs-xF-zFq" secondAttribute="trailing" constant="-10" id="A1F-XS-BWd"/>
@@ -91,6 +93,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iEj-yj-IQ5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Tp-Ip-K4b"/>
@@ -102,7 +105,6 @@
                             <constraint firstItem="egC-qt-g2J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bUj-Wk-aZv"/>
                             <constraint firstItem="egC-qt-g2J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="iyE-3v-7Xh"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="childBGView" destination="q7k-k5-yPC" id="SW4-fT-Juc"/>
@@ -139,20 +141,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of2-ES-wl1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of2-ES-wl1">
                                 <rect key="frame" x="0.0" y="728" width="414" height="50"/>
-                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ACR-V5-1Y3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="LogOut"/>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Logout"/>
                                 <connections>
                                     <action selector="logoutButtonPressed:" destination="dgD-T1-pyg" eventType="touchUpInside" id="neL-m0-RqM"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kob-Ql-cjt"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Bk8-2G-P3i" firstAttribute="centerX" secondItem="NSN-wc-zOh" secondAttribute="centerX" id="Bb0-zE-a6M"/>
                             <constraint firstItem="Bk8-2G-P3i" firstAttribute="top" secondItem="kob-Ql-cjt" secondAttribute="top" constant="25" id="CbD-vw-9nM"/>
@@ -163,7 +167,6 @@
                             <constraint firstItem="Y9r-GE-PAr" firstAttribute="top" secondItem="Bk8-2G-P3i" secondAttribute="bottom" constant="50" id="xGR-Ju-tbX"/>
                             <constraint firstItem="Of2-ES-wl1" firstAttribute="centerX" secondItem="NSN-wc-zOh" secondAttribute="centerX" id="yR4-8V-yCa"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="kob-Ql-cjt"/>
                     </view>
                     <navigationItem key="navigationItem" id="kd9-BG-Wjq"/>
                     <connections>
@@ -219,7 +222,7 @@
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNF-Fi-nQd">
                                 <rect key="frame" x="324" y="44" width="80" height="40"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="KnA-A7-iDt"/>
                                     <constraint firstAttribute="width" constant="80" id="Mrp-Wo-2XC"/>
@@ -280,7 +283,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="UbO-Bh-gSP" secondAttribute="trailing" constant="20" id="uJH-3n-L6J"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="newsHeader" destination="UbO-Bh-gSP" id="etY-fs-Sl0"/>
                                             <outlet property="newsImage" destination="mQ6-wq-SOB" id="cRG-yn-rTO"/>
@@ -290,7 +293,8 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0i4-KO-8JB"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="cRy-do-mXS" firstAttribute="top" secondItem="0i4-KO-8JB" secondAttribute="top" id="8Iq-Gu-ajG"/>
                             <constraint firstItem="gNF-Fi-nQd" firstAttribute="leading" secondItem="cRy-do-mXS" secondAttribute="trailing" constant="10" id="B4i-Ua-dC8"/>
@@ -302,7 +306,6 @@
                             <constraint firstItem="ugY-BQ-UMg" firstAttribute="top" secondItem="cRy-do-mXS" secondAttribute="bottom" constant="10" id="cI7-fc-3dJ"/>
                             <constraint firstItem="ugY-BQ-UMg" firstAttribute="bottom" secondItem="0i4-KO-8JB" secondAttribute="bottom" id="hui-Ek-a8K"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="0i4-KO-8JB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Expolre" image="globe" catalog="system" id="Cd9-Rw-wrF"/>
                     <connections>
@@ -329,7 +332,7 @@
                                     <constraint firstAttribute="width" constant="40" id="Kuf-tw-Raa"/>
                                     <constraint firstAttribute="height" constant="40" id="luy-uE-qGy"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" image="arrow.left.circle.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                 </state>
@@ -339,7 +342,7 @@
                             </button>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4n-aT-piC">
                                 <rect key="frame" x="0.0" y="84" width="414" height="778"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -352,7 +355,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="xt5-Xa-AEA"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rVd-nH-lay" firstAttribute="centerX" secondItem="Irg-u6-U9P" secondAttribute="centerX" id="9O7-Ts-baD"/>
                             <constraint firstItem="L4n-aT-piC" firstAttribute="bottom" secondItem="xt5-Xa-AEA" secondAttribute="bottom" id="CRB-6b-XVt"/>
@@ -363,7 +367,6 @@
                             <constraint firstItem="9D3-wB-C0Y" firstAttribute="leading" secondItem="xt5-Xa-AEA" secondAttribute="leading" constant="20" id="asS-s2-KJV"/>
                             <constraint firstItem="9D3-wB-C0Y" firstAttribute="top" secondItem="xt5-Xa-AEA" secondAttribute="top" id="gWz-OE-KWF"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="xt5-Xa-AEA"/>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="9D3-wB-C0Y" id="R28-8E-e7j"/>
@@ -428,7 +431,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="ywF-Jz-wFZ" secondAttribute="trailing" constant="20" id="uZm-ye-cqP"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="newsImage" destination="Jwy-7a-Pxp" id="hUb-4q-pk3"/>
                                             <outlet property="newsTime" destination="ywF-Jz-wFZ" id="VjO-67-3Eu"/>
@@ -450,7 +453,7 @@
                                     <constraint firstAttribute="width" constant="40" id="WwR-fo-GaH"/>
                                     <constraint firstAttribute="height" constant="40" id="yCo-Wd-ejL"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
                                 <state key="normal" image="line.horizontal.3.decrease.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26"/>
                                 </state>
@@ -459,7 +462,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lBq-0w-Sbe"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nfq-2O-Hcd" firstAttribute="trailing" secondItem="lBq-0w-Sbe" secondAttribute="trailing" id="ETG-vJ-Kyx"/>
                             <constraint firstItem="fuo-Yq-NuV" firstAttribute="leading" secondItem="hBn-8h-D9V" secondAttribute="trailing" constant="5" id="LtL-8E-omm"/>
@@ -471,7 +475,6 @@
                             <constraint firstItem="nfq-2O-Hcd" firstAttribute="leading" secondItem="lBq-0w-Sbe" secondAttribute="leading" id="zAB-9b-8pv"/>
                             <constraint firstItem="hBn-8h-D9V" firstAttribute="leading" secondItem="lBq-0w-Sbe" secondAttribute="leading" constant="20" id="zdr-Bd-NNp"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="lBq-0w-Sbe"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Top Headlines" image="flag.circle" catalog="system" id="h59-b1-VkF"/>
                     <connections>
@@ -491,6 +494,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <color key="selectedImageTintColor" systemColor="systemIndigoColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="pYm-0p-y4X" kind="relationship" relationship="viewControllers" id="wSF-Ll-2c4"/>
@@ -503,13 +508,28 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.left.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="chevron.down.circle" catalog="system" width="64" height="60"/>
-        <image name="flag.circle" catalog="system" width="64" height="60"/>
+        <image name="arrow.left.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="chevron.down.circle" catalog="system" width="128" height="121"/>
+        <image name="flag.circle" catalog="system" width="128" height="121"/>
         <image name="global" width="512" height="512"/>
-        <image name="globe" catalog="system" width="64" height="60"/>
-        <image name="line.horizontal.3.decrease.circle" catalog="system" width="64" height="60"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="line.horizontal.3.decrease.circle" catalog="system" width="128" height="121"/>
         <image name="news" width="1950" height="705"/>
         <image name="noProfile" width="680" height="659"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
