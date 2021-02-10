@@ -11,52 +11,60 @@ import RSSelectionMenu
 
 class ExploreViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate {
     
+    //MARK:- Outlets and Properties
     @IBOutlet weak var exploreSearchBar: UISearchBar!
     @IBOutlet weak var exploreTableView: UITableView!
     @IBOutlet weak var newsSource: UIButton!
     
     var sourceDataArray : [String] = [""]
     var sourceSelectedDataArray = [String]()
-    
     let sourceListModel = NewsSourceModel()
     let sourceListPresenter = NewsSourceAPIPresenter(newsSourceService: NewsSourceService())
     let topHeadlinePresenter = NewsAPIPresenter(newsService: NewsAPIService())
     let newsDataModel = NewsModel()
-    
     var searchActive = false
     var searchData = [ArticleModel]()
     var currentSource : String = ""
     
+    
+    //MARK:- View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       setUI()
+        
+        setUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         topHeadlinePresenter.attachView(view:self)
         sourceListPresenter.attachView(view: self)
-
     }
+    
+    //Dismissing Keyboard
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
+    }
+    
+    //MARK:- Methods
     func setUI(){
         exploreTableView.delegate = self
         exploreTableView.dataSource = self
         exploreSearchBar.delegate = self
         newsSource.layer.cornerRadius = 10
-        
         sourceListPresenter.getNewsSourceDetail()
     }
     
+    
+    //MARK:- TableView Delegate and DataSource Methods
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-           
         if searchActive == true{
             return searchData.count
         }else{
             return newsDataModel.mArticle.count
         }
-       }
-       
-       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let exploreCell = exploreTableView.dequeueReusableCell(withIdentifier: "ExploreTableViewCell", for: indexPath) as! ExploreTableViewCell
         
         if searchActive == true{
@@ -69,7 +77,8 @@ class ExploreViewController: UIViewController,UITableViewDelegate,UITableViewDat
             exploreCell.newsImage.kf.setImage(with: URL(string: newsDataModel.mArticle[indexPath.row].mURLToImage))
         }
         return exploreCell
-       }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let webVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DetailsNewsViewController") as? DetailsNewsViewController
         if searchActive == true{
@@ -80,7 +89,6 @@ class ExploreViewController: UIViewController,UITableViewDelegate,UITableViewDat
         webVC?.modalPresentationStyle = .fullScreen
         self.present(webVC!, animated: true)
     }
-    
     
     @IBAction func newsSourceButtonPressed(_ sender: Any) {
         showNewsSourceList()
@@ -99,19 +107,16 @@ class ExploreViewController: UIViewController,UITableViewDelegate,UITableViewDat
         menu.setSelectedItems(items: sourceSelectedDataArray) { [weak self] (name, index, selected, selectedItems) in
             self?.sourceSelectedDataArray = selectedItems
             
-            /// do some stuff...
-            
             for i in self!.sourceListModel.mSource{
                 if name == i.mName{
                     self?.currentSource = i.mId
-                    
                 }
             }
             self?.topHeadlinePresenter.getNewsDetail(newsType: self!.currentSource)
             self?.exploreTableView.reloadData()
         }
         // show with search bar
-
+        
         menu.showSearchBar { [weak self] (searchText) -> ([String]) in
             
             return self?.sourceDataArray.filter({ $0.lowercased().starts(with: searchText.lowercased()) }) ?? []
@@ -123,33 +128,35 @@ class ExploreViewController: UIViewController,UITableViewDelegate,UITableViewDat
         menu.show(style: .present, from: self)
     }
     
-      //searchBar implementation
-       func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-           searchActive = false
-       }
-//       func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-//           searchActive = false
-//       }
-       func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-           searchActive = false
-       }
-       func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-           
+    //searchBar implementation
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchActive = false
+    }
+    //       func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    //           searchActive = false
+    //       }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
         searchData = newsDataModel.mArticle.filter({ (text) -> Bool in
             let tmp:NSString = text.mTitle as NSString
-                     let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
-                     return range.location != NSNotFound
-                 })
-         
-           if (searchData.count == 0){
-               searchActive = false
-           }
-           else{
-               searchActive = true
-           }
-           self.exploreTableView.reloadData()
-       }
+            let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+            return range.location != NSNotFound
+        })
+        
+        if (searchData.count == 0){
+            searchActive = false
+        }
+        else{
+            searchActive = true
+        }
+        self.exploreTableView.reloadData()
+    }
 }
+
+//MARK:- Extensions
 
 extension ExploreViewController : NewsSourceViewProtocol{
     func setNewsDetail(data: NewsSourceModel) {
@@ -170,11 +177,10 @@ extension ExploreViewController : NewsSourceViewProtocol{
 }
 extension ExploreViewController : NewsViewProtocol{
     func setNewsDetail(data: NewsModel) {
-       // print("sourceSucess")
+        // print("sourceSucess")
         newsDataModel.mArticle.removeAll()
         newsDataModel.mArticle = data.mArticle
         exploreTableView.reloadData()
-        
     }
     
     func showErrorMessage(data: NewsModel) {
