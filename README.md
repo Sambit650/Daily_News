@@ -1,5 +1,7 @@
 # Daily_News
 
+[![GitHub issues](https://img.shields.io/github/issues/Sambit650/Daily_News)](https://github.com/Sambit650/Daily_News/issues)
+
 ## Feed your daily addiction with stories & photos from all our top channels: India & World News,
 ## Celebrity & Entertainment, Sports, Fashion, Science & Tech, Health, Money & Business, Travel and many more. Daily News app fits easily into your busy lifestyle.
 
