@@ -15,3 +15,5 @@ Daily News’s news content discovery engine aggregates rich content from more t
 * Top News
 Read the latest and most popular news articles on entertainment, economy, finance, business, technology,
 science, sports, travel, fashion, and politics - all delivered by top global and national media outlets.
+
+* UI Enhancement
