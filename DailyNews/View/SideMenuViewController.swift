@@ -10,7 +10,7 @@ import UIKit
 import SideMenu
 import GoogleSignIn
 
-class SideMenuViewController:UIViewController {
+class SideMenuViewController: UIViewController {
 
     @IBOutlet weak var userProfile:UIImageView!
     @IBOutlet weak var userName:UILabel!
@@ -32,6 +32,7 @@ class SideMenuViewController:UIViewController {
             userProfile.image = UIImage(data: imageData)
         }
     }
+
     @IBAction func logoutButtonPressed(_ sender: Any) {
         GIDSignIn.sharedInstance()?.signOut()
         

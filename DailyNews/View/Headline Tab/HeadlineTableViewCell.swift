@@ -10,19 +10,19 @@ import UIKit
 
 class HeadlineTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var newsImage: UIImageView!
-    @IBOutlet weak var newsTitle: UILabel!
-    @IBOutlet weak var newsTime: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        newsImage.layer.cornerRadius = 10
-    }
+  @IBOutlet weak var newsImage: UIImageView!
+  @IBOutlet weak var newsTitle: UILabel!
+  @IBOutlet weak var newsTime: UILabel!
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    newsImage.layer.cornerRadius = 10
+  }
 
-        // Configure the view for the selected state
-    }
+  override func setSelected(_ selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
+
+    // Configure the view for the selected state
+  }
 
 }

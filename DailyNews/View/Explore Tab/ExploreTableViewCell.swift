@@ -10,19 +10,17 @@ import UIKit
 
 class ExploreTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var newsImage: UIImageView!
-    @IBOutlet weak var newsHeader: UILabel!
-    @IBOutlet weak var newsPublishTime: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        newsImage.layer.cornerRadius = 10
-    }
+  @IBOutlet weak var newsImage: UIImageView!
+  @IBOutlet weak var newsHeader: UILabel!
+  @IBOutlet weak var newsPublishTime: UILabel!
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    newsImage.layer.cornerRadius = 10
+  }
 
-        
-    }
+  override func setSelected(_ selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
+  }
 
 }
